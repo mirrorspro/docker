@@ -8,9 +8,9 @@ build() {
     tpl='./github-workflows-tpls/cronjob'
     cp ${tpl} ${workflowYml}
     echo "${tpl} -> ${workflowYml}"
-    sed -i '' "s?#domain#?${domain}?g" ${workflowYml}
-    sed -i '' "s?#repo#?${repo}?g" ${workflowYml}
-    sed -i '' "s?#tag#?${tag}?g" ${workflowYml}
+    sed -i "s?#domain#?${domain}?g" ${workflowYml}
+    sed -i "s?#repo#?${repo}?g" ${workflowYml}
+    sed -i "s?#tag#?${tag}?g" ${workflowYml}
     cat ${workflowYml}
 }
 
