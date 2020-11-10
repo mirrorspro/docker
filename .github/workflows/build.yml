@@ -13,3 +13,13 @@ jobs:
       - name: Build Jobs
         run: |
           bash ./build-jobs.sh
+      - name: Commit files
+        run: |
+          git config --local user.email "tom_hejiaxi@163.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Add changes" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
