@@ -1,4 +1,4 @@
-name: k8s.gcr.io.kube-controller-manager
+name: Synchronize #domain#/#repo#:#tag#
 on:
   push:
     branches: [ main ]
@@ -19,4 +19,4 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
       - name: Push to DockerHub
         run: |
-          bash ./push.sh k8s.gcr.io kube-controller-manager:v1.18.3
+          bash ./sync.sh #domain# #repo#:#tag#

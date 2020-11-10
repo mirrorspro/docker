@@ -12,7 +12,7 @@
 
 ```bash
 
-./push k8s.gcr.io kube-controller-manager:v1.18.3 
+./sync.sh k8s.gcr.io kube-controller-manager v1.18.3 
 
 ```            
 
@@ -20,6 +20,6 @@
 
 ```bash
 
-./pull.sh k8s.gcr.io kube-controller-manager:v1.18.3 
+./pull.sh k8s.gcr.io kube-controller-manager v1.18.3 
 
 ```
