@@ -5,6 +5,12 @@ on:
   pull_request:
     branches: [ main ]
 
+env:
+  DRY_RUN: false
+  REPOSITORIES: |
+    mirrorspro/bot
+  WORKFLOW_FILES: |
+    workflows=.github/workflows
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,14 +19,11 @@ jobs:
       - name: Build Jobs
         run: |
           bash ./build-jobs.sh
-      - name: Commit files
-        run: |
-          git config --local user.email "tom_hejiaxi@163.com"
-          git config --local user.name "GitHub Action"
-          git add -A .
-          git commit -m "Add changes" -a
-      - name: Push changes
-        uses: ad-m/github-push-action@master
+
+      - name: Running Workflow Sync
+        uses: varunsridharan/action-github-workflow-sync@main
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          DRY_RUN: ${{ env.DRY_RUN }}
+          REPOSITORIES: ${{ env.REPOSITORIES }}
+          WORKFLOW_FILES: ${{ env.WORKFLOW_FILES }}
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}

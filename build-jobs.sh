@@ -4,8 +4,8 @@ build() {
     domain=$1
     repo=$2
     tag=$3
-    workflowYml=".github/workflows/${domain}.${repo}:${tag}.yml"
-    tpl='./github-workflows-tpls/cronjob'
+    workflowYml="./workflows/${domain}.${repo}:${tag}.yml"
+    tpl='./workflows-tpls/cronjob'
     cp ${tpl} ${workflowYml}
     echo "${tpl} -> ${workflowYml}"
     sed -i "s?#domain#?${domain}?g" ${workflowYml}
