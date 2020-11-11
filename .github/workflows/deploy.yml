@@ -26,4 +26,4 @@ jobs:
           DRY_RUN: ${{ env.DRY_RUN }}
           REPOSITORIES: ${{ env.REPOSITORIES }}
           WORKFLOW_FILES: ${{ env.WORKFLOW_FILES }}
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
