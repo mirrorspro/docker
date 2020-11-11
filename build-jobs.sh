@@ -4,6 +4,7 @@ build() {
     domain=$1
     repo=$2
     tag=$3
+    mkdir -p ./workflows
     workflowYml="./workflows/${domain}.${repo}:${tag}.yml"
     tpl='./workflows-tpls/cronjob'
     cp ${tpl} ${workflowYml}
