@@ -4,7 +4,7 @@ build() {
     domain=$1
     repo=$2
     tag=$3
-    workflowYmlRoot='./workflows'
+    workflowYmlRoot='.github/workflows'
     mkdir -p ${workflowYmlRoot}
     workflowYml="${workflowYmlRoot}/${domain}.${repo}:${tag}.yml"
     tpl='./workflows-tpls/cronjob'
