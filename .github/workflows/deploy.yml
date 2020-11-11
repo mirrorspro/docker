@@ -10,7 +10,7 @@ env:
   REPOSITORIES: |
     mirrorspro/bot
   WORKFLOW_FILES: |
-    workflows=.github/workflows
+    workflows=.github/workflows/docker
 jobs:
   build:
     runs-on: ubuntu-latest
