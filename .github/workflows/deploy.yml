@@ -10,7 +10,7 @@ env:
   REPOSITORIES: |
     mirrorspro/bot
   WORKFLOW_FILES: |
-    workflows=.github/workflows
+    workflows=.github/workflows/docker
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -26,4 +26,4 @@ jobs:
           DRY_RUN: ${{ env.DRY_RUN }}
           REPOSITORIES: ${{ env.REPOSITORIES }}
           WORKFLOW_FILES: ${{ env.WORKFLOW_FILES }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
