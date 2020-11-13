@@ -1,16 +1,14 @@
 #!/bin/bash
 
 build() {
-    domain=$1
-    repo=$2
-    tag=$3
+    repo=$1
+    tag=$2
     workflowYmlRoot='workflows'
     mkdir -p ${workflowYmlRoot}
-    workflowYml="${workflowYmlRoot}/${domain}.${repo}:${tag}.yml"
+    workflowYml="${workflowYmlRoot}/${repo////_}:${tag}.yml"
     tpl='./workflows-tpls/cronjob'
     cp ${tpl} ${workflowYml}
     echo "${tpl} -> ${workflowYml}"
-    sed -i "s?#domain#?${domain}?g" ${workflowYml}
     sed -i "s?#repo#?${repo}?g" ${workflowYml}
     sed -i "s?#tag#?${tag}?g" ${workflowYml}
     cat ${workflowYml}
@@ -18,13 +16,10 @@ build() {
 
 dist="dist"
 
-for domain in `ls ${dist}`
+for repo in `find ${dist} -type f -printf "%P\n"`
 do
-    for repo in `ls ${dist}/${domain}`
+    for tag in `cat ${dist}/${repo}|sed 's/ //g'`
     do
-        while read tag
-        do
-            build $domain $repo $tag
-        done < "${dist}/${domain}/${repo}"
+        build ${repo} $tag
     done
 done
