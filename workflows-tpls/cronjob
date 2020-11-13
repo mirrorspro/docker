@@ -19,4 +19,4 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
       - name: Push to DockerHub
         run: |
-          bash ./sync.sh #domain# #repo#:#tag#
+          bash ./sync.sh #domain# #repo# #tag#
