@@ -8,7 +8,7 @@ on:
     branches: [ main ]
 
 jobs:
-  DockerHub:
+  hub:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -20,7 +20,7 @@ jobs:
       - name: Push
         run: |
           bash ./sync.sh #repo# #tag#
-  AliYun:
+  aliyun-shenzhen:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

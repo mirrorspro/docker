@@ -11,19 +11,19 @@ https://hub.docker.com/orgs/mirrorspro
 镜像: ```mirrorspro/k8s.gcr.io.kube-controller-manager:v1.18.3```
 
 
-* 提交
-
-```bash
-
-./sync.sh k8s.gcr.io/kube-controller-manager v1.18.3 
-
-```
-
-* 拉取并在本地还原目标镜像
+* 拉取并在本地还原目标镜像，默认从docker hub上拉取
 
 ```bash
 
 ./pull.sh k8s.gcr.io/kube-controller-manager v1.18.3 
+
+```
+
+* 指定镜像仓库商```registry.cn-shenzhen.aliyuncs.com```
+
+```bash
+
+./pull.sh k8s.gcr.io/kube-controller-manager v1.18.3 registry.cn-shenzhen.aliyuncs.com
 
 ```
 
