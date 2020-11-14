@@ -1,6 +1,9 @@
 # docker
 一些docker仓库的副本镜像
 
+https://hub.docker.com/orgs/mirrorspro
+
+
 ## .e.g
 
 目标: ```k8s.gcr.io/kube-controller-manager:v1.18.3```
@@ -33,4 +36,6 @@
 ./index.sh quay.io/kubernetes-ingress-controller/nginx-ingress-controller 0.32.0
 
 ```
+
+
 
