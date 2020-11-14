@@ -12,7 +12,7 @@
 
 ```bash
 
-./sync.sh k8s.gcr.io kube-controller-manager v1.18.3 
+./sync.sh k8s.gcr.io/kube-controller-manager v1.18.3 
 
 ```            
 
@@ -20,6 +20,17 @@
 
 ```bash
 
-./pull.sh k8s.gcr.io kube-controller-manager v1.18.3 
+./pull.sh k8s.gcr.io/kube-controller-manager v1.18.3 
 
 ```
+
+## 新增一个要同步的docker镜像库
+
+`quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.32.0`
+
+```bash
+
+./index.sh quay.io/kubernetes-ingress-controller/nginx-ingress-controller 0.32.0
+
+```
+
