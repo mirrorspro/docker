@@ -8,7 +8,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  DockerHub:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -20,3 +20,16 @@ jobs:
       - name: Push to DockerHub
         run: |
           bash ./sync.sh #repo# #tag#
+  AliYun:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Login to registry.cn-shenzhen.aliyuncs.com
+        uses: docker/login-action@v1
+        with:
+          registry: registry.cn-shenzhen.aliyuncs.com
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+      - name: Push to DockerHub
+        run: |
+          bash ./sync.sh #repo# #tag# registry.cn-shenzhen.aliyuncs.com
