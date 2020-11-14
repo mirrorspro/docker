@@ -4,6 +4,11 @@
 https://hub.docker.com/orgs/mirrorspro
 
 
+## 它是如何工作的
+
+![](./doc/mirrorspro_docker.jpg)
+
+
 ## .e.g
 
 目标: ```k8s.gcr.io/kube-controller-manager:v1.18.3```
