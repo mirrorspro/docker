@@ -1,7 +1,7 @@
 # docker 镜像边缘仓库搬运器
 目标是解决在跨网络的场景下，难以获取镜像的问题
 
-![Deploy Synchronize Jobs](https://github.com/mirrorspro/docker/workflows/.github/workflows/Deploy+Synchronize+Jobs/badge.svg)
+![Deploy Synchronize Jobs](https://github.com/mirrorspro/docker/workflows/.github/workflows/Deploy%20Synchronize%20Jobs/badge.svg)
 
 
 
