@@ -1,7 +1,7 @@
 # docker 镜像边缘仓库搬运器
 目标是解决在跨网络的场景下，难以获取镜像的问题
 
-![example workflow file path](.github/workflows/deploy.yml/badge.svg)
+![example workflow file path](https://github.com/mirrorspro/docker/workflows/.github/workflows/deploy.yml/badge.svg)
 
 
 
