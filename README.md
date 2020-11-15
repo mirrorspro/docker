@@ -1,12 +1,29 @@
-# docker 镜像搬运工
-镜像搬运工，用于解决在跨网络的场景下，难以获取镜像的问题
+# docker 镜像边缘仓库搬运器
+目标是解决在跨网络的场景下，难以获取镜像的问题
+
+![example workflow file path](https://github.com/mirrorspro/docker/workflows/.github/workflows/deploy.yml/badge.svg)
+
+
 
 ## 它是如何工作的
 
 ![](./doc/mirrorspro_docker.jpg)
 
+## 目录结构
 
-https://github.com/mirrorspro/docker.bot.git
+```
+
+./
+├── README.md
+├── build-jobs.sh           ... 构建github actions jobs的脚本
+├── dist                    ... 源镜像配置
+├── doc                     
+├── index.sh                ... 添加源镜像索引脚本
+├── pull.sh                 ... 拉取镜像脚本
+├── workflows               ... 临时存储github actions jobs配置，用于同步至机器人仓库（https://github.com/mirrorspro/docker.bot.git）
+└── workflows-tpls          ... github actions jobs配置模板
+
+```
 
 ## 我要怎样使用
 
@@ -42,7 +59,7 @@ https://hub.docker.com/orgs/mirrorspro
 目标 `mirrorspro/quay.io_kubernetes-ingress-controller_nginx-ingress-controller:0.32.0`
 
 
-* 在业务机器本地使用镜像
+* 在本地使用镜像
 
 ```bash
 
