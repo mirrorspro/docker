@@ -1,3 +1,4 @@
+name: Deploy Synchronize Jobs
 on:
   push:
     branches: [ main ]
