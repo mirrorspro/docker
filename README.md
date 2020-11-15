@@ -1,5 +1,5 @@
-# docker
-一些docker仓库的副本镜像
+# docker 镜像搬运工
+镜像搬运工，用于解决在跨网络的场景下，难以获取镜像的问题
 
 ## 它是如何工作的
 
@@ -24,14 +24,6 @@ https://github.com/mirrorspro/docker.bot.git
 ```bash
 
 git add -A ./dist && git commit -m "新增源镜像" && git push
-
-```
-
-* 指定镜像仓库商```registry.cn-shenzhen.aliyuncs.com```
-
-```bash
-
-./pull.sh quay.io/kubernetes-ingress-controller/nginx-ingress-controller v1.18.3 registry.cn-shenzhen.aliyuncs.com
 
 ```
 
