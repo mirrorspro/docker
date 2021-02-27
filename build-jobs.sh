@@ -1,4 +1,5 @@
 #!/bin/bash
+pwd
 build() {
     root=`dirname $0`
     repo=$1
