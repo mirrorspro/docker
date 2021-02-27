@@ -1,12 +1,12 @@
 #!/bin/bash
-
 build() {
+    root=`dirname $0`
     repo=$1
     tag=$2
-    workflowYmlRoot='workflows'
+    workflowYmlRoot="${root}/workflows"
     mkdir -p ${workflowYmlRoot}
     workflowYml="${workflowYmlRoot}/${repo////_}:${tag}.yml"
-    tpl='./workflows-tpls/cronjob'
+    tpl="${root}/workflows-tpls/cronjob"
     cp ${tpl} ${workflowYml}
     echo "${tpl} -> ${workflowYml}"
     sed -i "s?#repo#?${repo}?g" ${workflowYml}
