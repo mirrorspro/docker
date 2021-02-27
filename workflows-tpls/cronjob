@@ -32,7 +32,7 @@ jobs:
           password: ${{ secrets.ALIYUN_PASSWORD }}
       - name: Push
         run: |
-          bash ./sync.sh #repo# #tag# registry.cn-shenzhen.aliyuncs.com
+          bash ./sync.sh #repo# #tag# registry.cn-shenzhen.aliyuncs.com/tomhjx/mirrorspro
   aliyun-guangzhou:
     runs-on: ubuntu-latest
     steps:
@@ -45,5 +45,5 @@ jobs:
           password: ${{ secrets.ALIYUN_PASSWORD }}
       - name: Push
         run: |
-          bash ./sync.sh #repo# #tag# registry.cn-guangzhou.aliyuncs.com
+          bash ./sync.sh #repo# #tag# registry.cn-guangzhou.aliyuncs.com/tomhjx/mirrorspro
 
