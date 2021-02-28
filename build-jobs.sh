@@ -1,7 +1,7 @@
 #!/bin/bash
 pwd
+root=`dirname $0`
 build() {
-    root=`dirname $0`
     repo=$1
     tag=$2
     workflowYmlRoot="${root}/workflows"
@@ -15,7 +15,7 @@ build() {
     cat ${workflowYml}
 }
 
-dist="dist"
+dist="${root}/dist"
 
 for repo in `find ${dist} -type f -printf "%P\n"`
 do
