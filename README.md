@@ -48,7 +48,7 @@ git add -A ./dist && git commit -m "新增源镜像" && git push
 
 e.g. 
 
-https://hub.docker.com/orgs/mirrorspro
+https://hub.docker.com/orgs/mirrorspro/repositories
 
 命名格式：
 
