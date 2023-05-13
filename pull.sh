@@ -8,10 +8,10 @@ tag="${2}"
 registry="${3}"
 edgePrefix=""
 if [ ! -z "${registry}" ];then
-    edgePrefix="${registry}/"
+    edgePrefix="${registry}/tomhjx/"
 fi
 
-edge0=${src////_}
+edge0=${src0////_}
 edge="${edgePrefix}mirrorspro/${edge0}:${tag}"
 src="${src0}:${tag}"
 docker pull ${edge}
