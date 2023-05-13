@@ -5,9 +5,15 @@
 
 src0="${1}"
 tag="${2}"
+area="${3}"
+
+if [ -z "${area}" ];then
+    area="guangzhou"
+fi
+
 
 edge0=${src0////_}
-edge="mirrorspro/${edge0}:${tag}"
+edge="registry.cn-${area}.aliyuncs.com/tomhjx/mirrorspro:${edge0}.${tag}"
 src="${src0}:${tag}"
 docker pull ${edge}
 docker tag ${edge} ${src}

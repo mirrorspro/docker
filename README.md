@@ -67,7 +67,7 @@ https://hub.docker.com/orgs/mirrorspro/repositories
 ./pull.sh quay.io/kubernetes-ingress-controller/nginx-ingress-controller 0.32.0
 
 // from registry.cn-guangzhou.aliyuncs.com 
-./pull.sh quay.io/kubernetes-ingress-controller/nginx-ingress-controller 0.32.0 registry.cn-guangzhou.aliyuncs.com
+./pull-aliyuncs.sh quay.io/kubernetes-ingress-controller/nginx-ingress-controller 0.32.0 guangzhou
 
 ```
 
